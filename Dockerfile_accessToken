@@ -29,11 +29,11 @@ RUN git clone https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web.git \
 # 开放端口3000
 EXPOSE 3000
 # 开放端口8008
-EXPOSE 8008
+EXPOSE 8899
 
 # 环境变量
 ENV ACCESS_TOKEN=YourToken CODE=YourCode
 
-CMD sh -c 'pip3 install --upgrade pandora-chatgpt && echo "${ACCESS_TOKEN}" > /app/pandora/token.txt && cd /app/pandora && pandora -s 0.0.0.0:8008 -t token.txt & cd /app/ChatGPT-3.5-AccessToken-Web && yarn start'
+CMD sh -c 'pip3 install --upgrade pandora-chatgpt && echo "${ACCESS_TOKEN}" > /app/pandora/token.txt && cd /app/pandora && pandora -s 0.0.0.0:8899 -t token.txt & cd /app/ChatGPT-3.5-AccessToken-Web && yarn start'
 
 
