@@ -37,8 +37,8 @@ RUN crontab -l | { cat; echo "0 0 */10 * * bash /app/myscript.sh"; } | crontab -
 
 # 开放端口3000
 EXPOSE 3000
-# 开放端口8899
-EXPOSE 8008
+# 开放端口8008
+EXPOSE 8899
 
 # 环境变量
 ENV username=Youruser password=Yourpassowrd CODE=YourCode
